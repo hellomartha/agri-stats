@@ -1,15 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AgResearch</title>
+    <title>AgriStats</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   </head>
 
   <body>
-    <%= yield %>
+  <body  class="text-center" >
+    <% flash.each do |message_type, message| %>
+      <%= message %>
+    <% end %>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">アグリスタッツ</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="<%= new_result_path %>">登録</a>
+            <a class="nav-link" href="<%=ranking_path(category: "occupations")%>">職業ランキング</a>
+            <a class="nav-link" href="<%=ranking_path(category: "improvements")%>">進歩ランキング</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>

@@ -1,0 +1,28 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <% sort_mark=" ▼ "%>
+      <th scope="col">ランク</th>
+      <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'number')%>">番号</a><%= sort_mark if params[:sorted_by] == "number"%></th>
+      <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'name')%>">名前</a><%= sort_mark if params[:sorted_by] == "name"%></th>
+      <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'win_rate')%>">勝率</a><%= sort_mark if (params[:sorted_by].nil? || params[:sorted_by] == "win_rate")%></th>
+      <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'use_rate')%>">使用率</a><%= sort_mark if params[:sorted_by] == "use_rate"%></th>
+      <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'score_ave')%>">平均点</a><%= sort_mark if params[:sorted_by] == "score_ave"%></th>
+      <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'pick_ave')%>">ピック順</a><%= sort_mark if params[:sorted_by] == "pick_ave"%></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cards.each.with_index(@cards.offset_value + 1) do|card, i|%>
+      <tr>
+        <th scope="row"><%= i %></th>
+        <td><%=card.number%></td>
+        <td><%=card.name_ja || card.name_en%></td>
+        <td><%=number_to_percentage(card.win_rate*100, precision: 2)%></td>
+        <td><%=number_to_percentage(card.use_rate*100, precision: 2)%></td>
+        <td><%=number_with_precision(card.score_ave, precision: 2)%>点</td>
+        <td><%=number_with_precision(card.pick_ave, precision: 2)%>手</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @cards %>

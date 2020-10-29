@@ -1,0 +1,49 @@
+@import '~bootstrap/scss/bootstrap';
+
+.left_input{
+  width: 40%;
+}
+
+.right_input{
+  width: 40%;
+}
+
+.common_form, .picks_form{
+  width: 100%;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.a_pick{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.one-col-form{
+  margin-left: 15%;
+}
+
+.pick_count{
+  text-align: left;
+  margin-left: 10%;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+legend.col-form-label{
+  display: none;
+}
+
+.radiobtn-inline{
+  display: inline-block;
+  margin: auto 20px;
+}
+
+.sticky_img{
+  position: sticky;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  opacity: 0.4;
+}

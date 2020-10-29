@@ -1,0 +1,22 @@
+ja:
+  activerecord:
+    models:
+      result: ドラフト
+      card: カード
+      pick: ピック
+      
+    attributes:
+      result:
+        player: プレイ人数
+        turn_number: 番手
+        rank: 順位
+        score: 得点
+
+      card:
+        name_en: 名前(英)
+        name_ja: 名前(日)
+        number: カード番号
+
+      pick:
+        pick_number: ピック順
+        card: カード
