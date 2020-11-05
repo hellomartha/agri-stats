@@ -419,7 +419,7 @@ C057,生野菜,Crudit’e,小進歩
 C058,木彫り,Woodcraft,小進歩
 C059,,,小進歩
 C060,陶工の小さな窯,SmallPotter'sOven,小進歩
-Ｃ061,ビールジョッキ,BeerStrein,小進歩
+C061,ビールジョッキ,BeerStrein,小進歩
 C062,調理場の増設,CookingHearthExtension,小進歩
 C063,クラフトビール醸造所,CraftBrewery,小進歩
 C064,バーボン蒸留所,CornSchnappsDistillery,小進歩
@@ -444,7 +444,6 @@ C082,金物屋,HardwareStore,小進歩
 C083,早起きの牛,EalryCattle,小進歩
 C084,ホソムギ,PerennialRye,小進歩
 C085,隠れ家建築家,Den Builder,職業
-C085,,,職業
 C086,家畜の給餌係,Livesstock Feeder,職業
 C087,左官屋,Mason,職業
 C088,大工見習い,Carpenter's Apprentice,職業
