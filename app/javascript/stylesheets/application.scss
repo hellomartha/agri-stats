@@ -26,9 +26,18 @@
   margin-right: auto !important;
 }
 
+.show-form{
+  width: 90%;
+}
+
+
 .pick_count{
   text-align: left;
   margin-left: 10%;
+  font-weight: bold;
+  font-size: 120%;
+}
+.bold{
   font-weight: bold;
   font-size: 120%;
 }
@@ -43,7 +52,7 @@ legend.col-form-label{
 }
 
 .hands-occupations, .hands-improvements{
-  display: flex;
+  display: inline-flex;
 }
 .used-switch{
   width: 75px;
