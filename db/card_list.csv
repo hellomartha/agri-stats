@@ -361,7 +361,7 @@ B179,猪狩人,,職業
 B180,獲物呼び,,職業
 C001,分解修理,Overhaul,小進歩
 C002,厩,Stable,小進歩
-C003,,,小進歩
+C003,,Carriage Trip,小進歩
 C004,筆記板,WritingBoards,小進歩
 C005,改装,Remodeling,小進歩
 C006,除石作業,Stone Clearing,小進歩
@@ -369,38 +369,38 @@ C007,刃ばさみ,BladeShears,小進歩
 C008,肥料用植物,PlantFertilizer,小進歩
 C009,オートマチック水桶,AutomaticWaterTrough,小進歩
 C010,二段ベッド,BunkBeds,小進歩
-C011,,,小進歩
+C011,,Wildlife Reserve,小進歩
 C012,牛牧場,CattleFarm,小進歩
 C013,木製スライドハンマー,WoodSlideHammer,小進歩
-C014,,,小進歩
+C014,,Straw-thatched Roof,小進歩
 C015,格子柵,Trellis,小進歩
 C016,畑の柵,Field Fences,小進歩
 C017,新しい耕作地,Newly -PlowedField,小進歩
 C018,転がし鋤,Roll-OverPlow,小進歩
-C019,,,小進歩
+C019,,Swing Plow,小進歩
 C020,もぐら鋤,MolePlow,小進歩
 C021,ハート型の石,Heart of Stone,小進歩
 C022,バスケットチェア,BasketChair,小進歩
 C023,雇用契約,Job Contract,小進歩
 C024,小麦畑のベッド,Bed in the GrainField,小進歩
-C025,,,小進歩
+C025,,Ssteam Machine,小進歩
 C026,脱穀棒,Flail,小進歩
 C027,建築設計図,Blueprint,小進歩
 C028,教師机,Teacher'sDesk,小進歩
 C029,ビール机,BeerTable,小進歩
-C030,,,小進歩
+C030,木骨の小屋,Half-Timbered House,小進歩
 C031,書斎,WritingChamber,小進歩
 C032,廃された出窓,AbortOriel,小進歩
 C033,緑化計画,GreeningPlan,小進歩
 C034,ネピアグラス加工プラント,ElephantgrassPlant,小進歩
 C035,ランタン・ハウス,Lantern House,小進歩
 C036,粘土層,ClayDeposit,小進歩
-C037,,,小進歩
+C037,,Dwelling Mound,小進歩
 C038,キリスト教信仰,Christianity,小進歩
 C039,スタジオ付きボート,StudioBoat,小進歩
 C040,キャンバス袋,CanvasSack,小進歩
 C041,農産物店,Farm Store,小進歩
-C042,,,小進歩
+C042,,Ravenous Hunger,小進歩
 C043,農舎,FarmBuilding,小進歩
 C044,鶏小屋,Chicken Coop,小進歩
 C045,シチュー,Stew,小進歩
@@ -417,7 +417,7 @@ C055,アトリエ,Studio,小進歩
 C056,飼槽柵,Feed Fence,小進歩
 C057,生野菜,Crudit’e,小進歩
 C058,木彫り,Woodcraft,小進歩
-C059,,,小進歩
+C059,火酒醸造所,Schnapps Distillery,小進歩
 C060,陶工の小さな窯,SmallPotter'sOven,小進歩
 C061,ビールジョッキ,BeerStrein,小進歩
 C062,調理場の増設,CookingHearthExtension,小進歩
@@ -432,7 +432,7 @@ C070,レタス畑,Lettuce Patch,小進歩
 C071,泥漿,Slurry,小進歩
 C072,収穫祭の計画,HarvestFestivalPlanning,小進歩
 C073,海藻肥料,Seaweed Fertilizer,小進歩
-C074,,,小進歩
+C074,個人の森,Private Forest,小進歩
 C075,薪,Firewood,小進歩
 C076,木材荷車,WoodCart,小進歩
 C077,レンガ車,ClaySpply,小進歩
@@ -542,15 +542,15 @@ C180,罠猟師,,職業
 D001,,,小進歩
 D002,,,小進歩
 D003,,,小進歩
-D004,,,小進歩
+D004,,Cross-Cut Wood,小進歩
 D005,,,小進歩
 D006,,,小進歩
-D007,,,小進歩
+D007,,Trident,小進歩
 D008,,,小進歩
 D009,獲物の交換,Game Trade,小進歩
-D010,,,小進歩
+D010,,Stork's Nest,小進歩
 D011,,,小進歩
-D012,,,小進歩
+D012,,Milking Place,小進歩
 D013,,,小進歩
 D014,,,小進歩
 D015,レンガの柱,Clay Supports,小進歩
@@ -566,8 +566,8 @@ D024,,,小進歩
 D025,,,小進歩
 D026,,,小進歩
 D027,,,小進歩
-D028,,,小進歩
-D029,,,小進歩
+D028,書き机,Writing Desk,小進歩
+D029,,Muck Rake,小進歩
 D030,,,小進歩
 D031,,,小進歩
 D032,,,小進歩
@@ -576,19 +576,19 @@ D034,,,小進歩
 D035,,,小進歩
 D036,,,小進歩
 D037,彫刻,Sculpture,小進歩
-D038,,,小進歩
-D039,,,小進歩
+D038,搾乳台,Milking Stool,小進歩
+D039,,Truffle Slicer,小進歩
 D040,,,小進歩
-D041,,,小進歩
+D041,,Horse-Drawn Boat,小進歩
 D042,教育手当,Education Bonus,小進歩
-D043,,,小進歩
+D043,,Hutch,小進歩
 D044,,,小進歩
-D045,,,小進歩
+D045,羊の井戸,Sheep Well,小進歩
 D046,,,小進歩
 D047,,,小進歩
 D048,,,小進歩
 D049,本棚,Bookshelf,小進歩
-D050,,,小進歩
+D050,,Foreign Aid,小進歩
 D051,,,小進歩
 D052,,,小進歩
 D053,,,小進歩
@@ -604,10 +604,10 @@ D062,,,小進歩
 D063,,,小進歩
 D064,,,小進歩
 D065,,,小進歩
-D066,,,小進歩
+D066,,Potter Ceramics,小進歩
 D067,,,小進歩
 D068,,,小進歩
-D069,,,小進歩
+D069,,Small Greenhouse,小進歩
 D070,,,小進歩
 D071,,,小進歩
 D072,,,小進歩
@@ -620,7 +620,7 @@ D078,葦の池,Reed Pond,小進歩
 D079,ニンジンミュージアム,Carrot Museum,小進歩
 D080,,,小進歩
 D081,,,小進歩
-D082,,,小進歩
+D082,狩りの戦利品,Hunting Trophy,小進歩
 D083,,,小進歩
 D084,ペレット状飼料,Feed Pellets,小進歩
 D085,,,職業
@@ -739,7 +739,7 @@ L083,,Seal of Approval,小進歩
 L084,,The Hulk,小進歩
 L085,,Groom,小進歩
 L086,,Game Night Organizer,小進歩
-L087,,Chairman's Garden,小進歩
+L087,議長の庭園,Chairman's Garden,小進歩
 L088,,Bear Trap,小進歩
 L089,,Bear Trap,小進歩
 L090,,Baren Park,小進歩

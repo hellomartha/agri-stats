@@ -5,11 +5,11 @@ class Pick < ApplicationRecord
   attr_accessor :deck, :number
 
   def deck
-    card&.number[0]
+    card&.number[0] if card&.number.present?
   end
 
   def number
-    card&.number[1..3].to_i
+    card&.number[1..3].to_i if card&.number.present?
   end
 end
 
