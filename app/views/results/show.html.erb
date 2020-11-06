@@ -1,5 +1,5 @@
 <div class=show-form>
-  <div> <a class="btn btn-primary align-center" href=<%=edit_result_path(id: @resource.id)%>>編集</a> </div>
+  <div> <a class="btn btn-primary align-center" href=<%=edit_result_path(id: @resource.id)%>>修正</a> </div>
   <% @resource.attributes.except("id").each do |k,v| %>
     <div>
       <%= t("activerecord.attributes.result")[k.to_sym] %> : <%= v%>
