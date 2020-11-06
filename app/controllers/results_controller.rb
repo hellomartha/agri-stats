@@ -10,6 +10,10 @@ class ResultsController < ApplicationController
     @resource ||= new_resource
   end
 
+  def edit
+    @resource = Result.find(params[:id])
+  end
+
   def new_resource
     x = Result.new
     ([*(1..7)]*2).sort.each do|num|
