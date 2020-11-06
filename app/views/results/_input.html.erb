@@ -64,28 +64,41 @@ const card_names = <%= card_names_json.html_safe%>;
 <script>
   $(".pick-input").on("change", function(){
     idx = parseInt($(".pick-input").index(this)/2);
-    deck = $(".pick-deck")[idx].value
-    number = $(".pick-number")[idx].value
-    if ( deck && number ){
-      n = ('000'+ number).slice(-3);
-      card_number = deck + n
-      card_name = card_names[card_number] || "カードがありません"
-      $(".picked-name").eq(idx).text(card_number +":" + card_name)
+    display_card_name_and_image(idx);
+    $(".pick-used").eq(idx).val(false);
+  });
 
-      cidx = (idx % 2 == 0) ? (idx /2) : ((idx-1)/2)+7
+  const display_card_name_and_image = (idx) =>{
+    const deck = $(".pick-deck")[idx].value
+    const number = $(".pick-number")[idx].value
+    const used = $(".pick-used")[idx].value
+    if ( deck && number ){
+      const n = ('000'+ number).slice(-3);
+      const card_number = deck + n;
+      const card_name = card_names[card_number] || "カードがありません";
+      $(".picked-name").eq(idx).text(card_number +":" + card_name);
+
+      cidx = (idx % 2 == 0) ? (idx /2) : ((idx-1)/2)+7;
       if (noimages[card_number]){
         img = '<span class="noimage">' + card_number + "<br>" +  noimages[card_number] + '</span>';
         $("div.hands .used-switch").eq(cidx).addClass("noimage").removeClass("nocard").html(card_number + "<br>" + noimages[card_number]);
+        if(used == "false"){
+          $("div.hands .used-switch").eq(cidx).addClass("not-used")
+        }
       } else if (!card_names[card_number]){
         img = '<span class="noimage">' + "カードが<br>ありません" + '</span>';
         $("div.hands .used-switch").eq(cidx).addClass("noimage nocard").html("カードが<br>ありません");;
       } else{
-        img = '<img src="/assets/'+ card_number + '.jpg" width=75 height=120 class="not-used">';
-        $("div.hands .used-switch").eq(cidx).addClass("grayout").removeClass("noimage nocard").html(img);
+        if(used == "false"){
+          img = '<img src="/assets/'+ card_number + '.jpg" width=75 height=120 class="not-used">';
+          $("div.hands .used-switch").eq(cidx).addClass("grayout").removeClass("noimage nocard").html(img);
+        }else{
+          img = '<img src="/assets/'+ card_number + '.jpg" width=75 height=120 class="">';
+          $("div.hands .used-switch").eq(cidx).removeClass("noimage nocard").html(img);
+        }
       }
-      $(".pick-used").eq(idx).val(false);
     }
-  });
+  }
 
   $("div.hands").on("click", ".used-switch img", function(){
     idx = $("div.hands .used-switch").index(this.parentElement);
@@ -103,5 +116,12 @@ const card_names = <%= card_names_json.html_safe%>;
     used = $(".pick-used").eq(fidx);
     console.log(used[0].value);
     used.val((used[0].value == "false") ? true : false );
+    $(this).toggleClass("not-used");
   });
+
+  $(function(){
+    for(let i=0; i < 14; i++){
+      display_card_name_and_image(i);
+    }
+  })
 </script>

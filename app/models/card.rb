@@ -10,8 +10,8 @@ class Card < ApplicationRecord
     used_picks = picks.where(used: true)
     num_of_use = used_picks.count
     num_of_win = used_picks.where("results.rank": 1).count
-    sum_of_score = used_picks.pluck("results.score").sum
-    sum_of_pick = picks.pluck(:pick_number).sum
+    sum_of_score = used_picks.pluck("results.score").compact.sum
+    sum_of_pick = picks.pluck(:pick_number).compact.sum
 
     win_rate = (num_of_use == 0) ? 0.0 : (Float(num_of_win)/Float(num_of_use))
     score_ave = (num_of_use == 0) ? 0.0 : (Float(sum_of_score)/Float(num_of_use))

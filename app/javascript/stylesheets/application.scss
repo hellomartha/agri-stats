@@ -61,6 +61,12 @@ legend.col-form-label{
   opacity: 0.5;
 }
 
+.noimage.not-used:before{
+  content: "×";
+  color: red;
+  font-size: 40px;
+}
+
 .align-right{
   margin-left: 70%;
 }
