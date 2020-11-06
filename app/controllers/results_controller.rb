@@ -10,20 +10,40 @@ class ResultsController < ApplicationController
     @resource ||= new_resource
   end
 
+  def edit
+    @resource = Result.find(params[:id])
+  end
+
   def new_resource
     x = Result.new
-    14.times {x.picks.build}
+    ([*(1..7)]*2).sort.each do|num|
+      x.picks.build(pick_number: num)
+    end
     x
   end
 
   def create
-    @resource = Result.new(permit_params)
+    x = permit_params
+    @resource = Result.new(x)
+    @resource.picks.each{|p|
+      p.result = @resource
+    }
     if @resource.save
       flash[:success] = "登録しました"
-      redirect_to "/"
+      redirect_to result_path(id: @resource.id)
     else
+      [*(1..7)].each do|num|
+        (2 - @resource.picks.filter{|i| i.pick_number == num}.size).times{
+          @resource.picks.build(pick_number: num)
+        }
+      end
+      @resource.picks.target.sort_by!(&:pick_number)
       render 'new'
     end
+  end
+
+  def show
+    @resource = Result.find(params[:id])
   end
 
   def permit_params

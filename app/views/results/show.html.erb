@@ -1,0 +1,74 @@
+<div class=show-form>
+  <div> <a class="btn btn-primary align-center" href=<%=edit_result_path(id: @resource.id)%>>編集</a> </div>
+  <% @resource.attributes.except("id").each do |k,v| %>
+    <div>
+      <%= t("activerecord.attributes.result")[k.to_sym] %> : <%= v%>
+    </div>
+  <% end %>
+
+  <div class="bold"> 
+    使用カード
+  </div>
+  <div class="hands">
+    <div class="hands-occupations">
+      <span class="used-switch"></span>
+      <span class="used-switch"></span>
+      <span class="used-switch"></span>
+      <span class="used-switch"></span>
+      <span class="used-switch"></span>
+      <span class="used-switch"></span>
+      <span class="used-switch"></span>
+    </div>
+    <div class="hands-improvements">
+      <span class="used-switch"></span>
+      <span class="used-switch"></span>
+      <span class="used-switch"></span>
+      <span class="used-switch"></span>
+      <span class="used-switch"></span>
+      <span class="used-switch"></span>
+      <span class="used-switch"></span>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function(){
+    const display_card_name_and_image = (idx) =>{
+      const noimages = <%= noimage_cards_json.html_safe%>;
+      const card_names = <%= card_names_json.html_safe%>;
+      const hands = <%=pick_data_json(@resource.picks).html_safe%>;
+      const deck = hands[idx].deck;
+      const number = hands[idx].card_number;
+      const used = hands[idx].used;
+      if ( deck && number ){
+        const n = ('000'+ number).slice(-3);
+        const card_number = deck + n;
+        const card_name = card_names[card_number] || "カードがありません";
+
+        if (noimages[card_number]){
+          img = '<span class="noimage">' + card_number + "<br>" +  noimages[card_number] + '</span>';
+          $("div.hands .used-switch").eq(idx).addClass("noimage").removeClass("nocard").html(card_number + "<br>" + noimages[card_number]);
+          if(used == "false"){
+            $("div.hands .used-switch").eq(idx).addClass("not-used")
+          }
+        } else if (!card_names[card_number]){
+          img = '<span class="noimage">' + "カードが<br>ありません" + '</span>';
+          $("div.hands .used-switch").eq(idx).addClass("noimage nocard").removeClass("not-used").html("カードが<br>ありません");;
+        } else{
+          $("div.hands .used-switch").eq(idx).removeClass("noimage nocard not-used");
+          if(used == false){
+            img = '<img src="/assets/'+ card_number + '.jpg" width=75 height=120 class="not-used">';
+            $("div.hands .used-switch").eq(idx).addClass("grayout");
+          }else{
+            img = '<img src="/assets/'+ card_number + '.jpg" width=75 height=120 class="">';
+          }
+          $("div.hands .used-switch").eq(idx).html(img);
+        }
+      }
+    }
+
+    for(let i=0; i < 14; i++){
+      display_card_name_and_image(i);
+    }
+  })
+</script>

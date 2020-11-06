@@ -1,0 +1,128 @@
+<%number_collection=[["1",1], ["2",2], ["3",3], ["4",4], ["5",5], ["6",6]]%>
+<%= simple_form_for @resource, wrapper: "horizontal_form" do |f| %>
+  <div class="input_forms">
+    <%= f.input :player, as: :select, collection: number_collection, wrapper_html: {class: "one-col-form"} %>
+    <%= f.input :turn_number, as: :select, collection: number_collection, wrapper_html: {class: "one-col-form"}  %>
+
+    <% count = 1%>
+      <%= f.fields_for :picks, wrapper: "horizontal_form", html: {class: "form-horizontal"} do|pick| %>
+        <% if count.odd? %>
+          <div class="pick_count"> 
+            Pick <%= 1+count/2 %> 
+          </div>
+          <div class="a_pick">
+            <div class="left_input">
+              <div class="picked-name"> </div>
+        <% else %>
+            <div class="right_input">
+              <div class="picked-name"> </div>
+        <% end if %>
+              <%= pick.input :deck, as: :select, collection: ["A","B","C","D","L"], label: false, prompt: "デッキ", input_html: {class: "pick-input pick-deck"}%>
+              <%= pick.input :number, as: :numeric, label: false, placeholder: "番号", input_html: {class: "pick-input pick-number"} %>
+              <%= pick.input :used, as: :hidden, input_html: {class: "pick-used"}%>
+            </div>
+        <% if count.even? %>
+          </div>
+        <% end if %>
+
+        <% count = count + 1%>
+      <% end %>
+    <div class="pick_count"> 
+      使用カード
+    </div>
+    <div class="hands">
+      <div class="hands-occupations">
+        <span class="used-switch"></span>
+        <span class="used-switch"></span>
+        <span class="used-switch"></span>
+        <span class="used-switch"></span>
+        <span class="used-switch"></span>
+        <span class="used-switch"></span>
+        <span class="used-switch"></span>
+      </div>
+      <div class="hands-improvements">
+        <span class="used-switch"></span>
+        <span class="used-switch"></span>
+        <span class="used-switch"></span>
+        <span class="used-switch"></span>
+        <span class="used-switch"></span>
+        <span class="used-switch"></span>
+        <span class="used-switch"></span>
+      </div>
+    </div>
+    <div class="common-form">
+      <%= f.input :rank, as: :select, collection: number_collection, wrapper_html: {class: "one-col-form"}  %>
+      <%= f.input :score, as: :numeric, wrapper_html: {class: "one-col-form"} %>
+    </div>
+  </div>
+
+  <%= f.button :submit, "登録", class: "btn btn-primary align-right" %>
+<% end %>
+
+<script>
+  $(function(){
+
+    const display_card_name_and_image = (idx) =>{
+      const noimages = <%= noimage_cards_json.html_safe%>;
+      const card_names = <%= card_names_json.html_safe%>;
+      const deck = $(".pick-deck")[idx].value
+      const number = $(".pick-number")[idx].value
+      const used = $(".pick-used")[idx].value
+      if ( deck && number ){
+        const n = ('000'+ number).slice(-3);
+        const card_number = deck + n;
+        const card_name = card_names[card_number] || "カードがありません";
+        $(".picked-name").eq(idx).text(card_number +":" + card_name);
+
+        cidx = (idx % 2 == 0) ? (idx /2) : ((idx-1)/2)+7;
+        if (noimages[card_number]){
+          img = '<span class="noimage">' + card_number + "<br>" +  noimages[card_number] + '</span>';
+          $("div.hands .used-switch").eq(cidx).addClass("noimage").removeClass("nocard").html(card_number + "<br>" + noimages[card_number]);
+          if(used == "false"){
+            $("div.hands .used-switch").eq(cidx).addClass("not-used")
+          }
+        } else if (!card_names[card_number]){
+          img = '<span class="noimage">' + "カードが<br>ありません" + '</span>';
+          $("div.hands .used-switch").eq(cidx).addClass("noimage nocard").removeClass("not-used").html("カードが<br>ありません");;
+        } else{
+          $("div.hands .used-switch").eq(cidx).removeClass("noimage nocard not-used");
+          if(used == "false"){
+            img = '<img src="/assets/'+ card_number + '.jpg" width=75 height=120 class="not-used">';
+            $("div.hands .used-switch").eq(cidx).addClass("grayout");
+          }else{
+            img = '<img src="/assets/'+ card_number + '.jpg" width=75 height=120 class="">';
+          }
+          $("div.hands .used-switch").eq(cidx).html(img);
+        }
+      }
+    }
+
+    for(let i=0; i < 14; i++){
+      display_card_name_and_image(i);
+    }
+    $(".pick-input").on("change", function(){
+      idx = parseInt($(".pick-input").index(this)/2);
+      display_card_name_and_image(idx);
+      $(".pick-used").eq(idx).val(false);
+    });
+
+    $("div.hands").on("click", ".used-switch img", function(){
+      idx = $("div.hands .used-switch").index(this.parentElement);
+      fidx = (idx >= 7) ? ((idx-7)*2+1) : (idx*2)
+      used = $(".pick-used").eq(fidx);
+      console.log(used[0].value);
+      used.val((used[0].value == "false") ? true : false );
+      $("div.hands .used-switch").eq(idx).toggleClass("grayout");
+      $(this).toggleClass("not-used");
+    });
+
+    $("div.hands").on("click", ".used-switch.noimage:not(.nocard)", function(){
+      idx = $("div.hands .used-switch").index(this);
+      fidx = (idx >= 7) ? ((idx-7)*2+1) : (idx*2)
+      used = $(".pick-used").eq(fidx);
+      console.log(used[0].value);
+      used.val((used[0].value == "false") ? true : false );
+      $(this).toggleClass("not-used");
+    });
+  })
+</script>
