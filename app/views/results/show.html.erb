@@ -43,28 +43,28 @@
       if ( deck && number ){
         const n = ('000'+ number).slice(-3);
         const card_number = deck + n;
-        const card_name = card_names[card_number] || "カードがありません";
+        const card_name = card_names[card_number] ;
 
         if (noimages[card_number]){
           img = '<span class="noimage">' + card_number + "<br>" +  noimages[card_number] + '</span>';
           $("div.hands .used-switch").eq(idx).addClass("noimage").removeClass("nocard").html(card_number + "<br>" + noimages[card_number]);
-          if(used == "false"){
+          if(used != true){
             $("div.hands .used-switch").eq(idx).addClass("not-used")
           }
-        } else if (!card_names[card_number]){
-          img = '<span class="noimage">' + "カードが<br>ありません" + '</span>';
-          $("div.hands .used-switch").eq(idx).addClass("noimage nocard").removeClass("not-used").html("カードが<br>ありません");;
         } else{
           $("div.hands .used-switch").eq(idx).removeClass("noimage nocard not-used");
-          if(used == false){
+          if(used != true){
             img = '<img src="/assets/'+ card_number + '.jpg" width=75 height=120 class="not-used">';
             $("div.hands .used-switch").eq(idx).addClass("grayout");
           }else{
             img = '<img src="/assets/'+ card_number + '.jpg" width=75 height=120 class="">';
           }
-          $("div.hands .used-switch").eq(idx).html(img);
         }
+      }else{
+        img = '<span class="noimage">' + "カードが<br>ありません" + '</span>';
+        $("div.hands .used-switch").eq(idx).addClass("noimage nocard not-used").html("カードが<br>ありません");;
       }
+      $("div.hands .used-switch").eq(idx).html(img);
     }
 
     for(let i=0; i < 14; i++){

@@ -12,38 +12,61 @@ class ResultsController < ApplicationController
 
   def edit
     @resource = Result.find(params[:id])
+    @resource = build_14picks(@resource)
+  end
+
+  def build_14picks(result)
+    [*(1..7)].each do|num|
+      (2 - result.picks.filter{|i| i.pick_number == num}.size).times{
+        result.picks.build(pick_number: num)
+      }
+    end
+    result.picks.target.sort_by!(&:pick_number)
+    result
+  end
+
+  def link_picks(result)
+    result.picks.each do |p|
+      p.result = result
+    end
+    result
   end
 
   def new_resource
-    x = Result.new
-    ([*(1..7)]*2).sort.each do|num|
-      x.picks.build(pick_number: num)
-    end
-    x
+    build_14picks(Result.new)
   end
 
   def create
     x = permit_params
     @resource = Result.new(x)
-    @resource.picks.each{|p|
-      p.result = @resource
-    }
+    @resource = link_picks(@resource)
     if @resource.save
       flash[:success] = "登録しました"
       redirect_to result_path(id: @resource.id)
     else
-      [*(1..7)].each do|num|
-        (2 - @resource.picks.filter{|i| i.pick_number == num}.size).times{
-          @resource.picks.build(pick_number: num)
-        }
-      end
-      @resource.picks.target.sort_by!(&:pick_number)
+      @resource = build_14picks(@resource)
       render 'new'
+    end
+  end
+
+  def update
+    x = permit_params
+    @resource = Result.find(params[:id])
+    @resource.picks=[]
+    @resource.assign_attributes(x)
+    @resource = link_picks(@resource)
+    if @resource.save
+      flash[:success] = "登録しました"
+      redirect_to result_path(id: @resource.id)
+    else
+      @resource = build_14picks(@resource)
+      render 'edit'
     end
   end
 
   def show
     @resource = Result.find(params[:id])
+    @resource = build_14picks(@resource)
   end
 
   def permit_params
