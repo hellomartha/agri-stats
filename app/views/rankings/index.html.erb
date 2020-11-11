@@ -5,6 +5,7 @@
       <th scope="col">ランク</th>
       <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'number')%>">番号</a><%= sort_mark if params[:sorted_by] == "number"%></th>
       <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'name')%>">名前</a><%= sort_mark if params[:sorted_by] == "name"%></th>
+      <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'num_of_pick')%>">出現回数</a><%= sort_mark if (params[:sorted_by].nil? || params[:sorted_by] == "win_rate")%></th>
       <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'win_rate')%>">勝率</a><%= sort_mark if (params[:sorted_by].nil? || params[:sorted_by] == "win_rate")%></th>
       <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'use_rate')%>">使用率</a><%= sort_mark if params[:sorted_by] == "use_rate"%></th>
       <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'score_ave')%>">平均点</a><%= sort_mark if params[:sorted_by] == "score_ave"%></th>
@@ -17,6 +18,7 @@
         <th scope="row"><%= i %></th>
         <td><%=card.number%></td>
         <td><%=card.name_ja || card.name_en%></td>
+        <td><%=card.num_of_pick%>回</td>
         <td><%=number_to_percentage(card.win_rate*100, precision: 2)%></td>
         <td><%=number_to_percentage(card.use_rate*100, precision: 2)%></td>
         <td><%=number_with_precision(card.score_ave, precision: 2)%>点</td>
