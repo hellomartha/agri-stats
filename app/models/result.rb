@@ -1,4 +1,5 @@
 class Result < ApplicationRecord
+  belongs_to :user, optional: true
   has_many :picks, -> {order("pick_number ASC")}, dependent: :destroy
   accepts_nested_attributes_for :picks
 
