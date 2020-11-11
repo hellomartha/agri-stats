@@ -11,11 +11,32 @@ ja:
         turn_number: 番手
         rank: 順位
         score: 得点
+        unit:
+          player: 人
+          turn_number: 番手 
+          rank: 位
+          score: 点
 
       card:
         name_en: 名前(英)
         name_ja: 名前(日)
         number: カード番号
+        num_of_pick: 出現回数
+        num_of_use: 使用回数
+        num_of_win: 勝利回数
+        win_rate: 勝率
+        use_rate: 使用率
+        score_ave: 平均得点
+        pick_ave: ピック順
+        category: 種別
+        unit:
+          num_of_pick: 回
+          num_of_use: 回
+          num_of_win: 回
+          win_rate: "%"
+          use_rate: "%"
+          score_ave: 点
+          pick_ave: 順目
 
       pick:
         pick_number: ピック順
