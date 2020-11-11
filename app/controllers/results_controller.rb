@@ -1,6 +1,11 @@
 class ResultsController < ApplicationController
   def model
-    @model = Result
+    Result
+  end
+  def columns_of_show
+    [
+      :player, :turn_number, :rank, :score
+    ]
   end
   def index
     @resources = Result.all
