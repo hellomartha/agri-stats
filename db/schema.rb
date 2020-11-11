@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_31_122953) do
+ActiveRecord::Schema.define(version: 2020_11_11_064406) do
 
   create_table "cards", force: :cascade do |t|
     t.string "name_en"
@@ -42,6 +42,15 @@ ActiveRecord::Schema.define(version: 2020_10_31_122953) do
     t.integer "turn_number"
     t.integer "rank"
     t.integer "score"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_results_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.string "user_name"
+    t.string "image_url"
   end
 
   add_foreign_key "picks", "cards"

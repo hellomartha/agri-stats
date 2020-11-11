@@ -25,6 +25,7 @@ class ResultsController < ApplicationController
   def create
     x = permit_params
     @resource = Result.new(x)
+    @resource.user = current_user if current_user.present?
     @resource.picks.each{|p|
       p.result = @resource
     }
