@@ -1,6 +1,11 @@
 class ResultsController < ApplicationController
   def model
-    @model = Result
+    Result
+  end
+  def columns_of_show
+    [
+      :player, :turn_number, :rank, :score
+    ]
   end
   def index
     @resources = Result.all
@@ -40,6 +45,7 @@ class ResultsController < ApplicationController
     x = permit_params
     @resource = Result.new(x)
     @resource = link_picks(@resource)
+    @resource.user = current_user if current_user.present?
     if @resource.save
       flash[:success] = "登録しました"
       redirect_to result_path(id: @resource.id)

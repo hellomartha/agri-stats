@@ -1,10 +1,6 @@
 <div class=show-form>
-  <div> <a class="btn btn-primary align-center" href=<%=edit_result_path(id: @resource.id)%>>修正</a> </div>
-  <% @resource.attributes.except("id").each do |k,v| %>
-    <div>
-      <%= t("activerecord.attributes.result")[k.to_sym] %> : <%= v%>
-    </div>
-  <% end %>
+  <iv> <a class="btn btn-primary align-center" href=<%=edit_result_path(id: @resource.id)%>>修正</a> </div>
+  <%= show_columns(@resource) %>
 
   <div class="bold"> 
     使用カード

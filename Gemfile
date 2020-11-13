@@ -31,6 +31,8 @@ gem 'pry-rails'
 gem 'pry-byebug'
 gem 'kaminari'
 gem 'rails-i18n'
+gem 'dotenv-rails'
+gem 'omniauth-twitter'
 
 group :production do
   gem 'pg'

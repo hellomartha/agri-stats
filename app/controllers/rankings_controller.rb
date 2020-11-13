@@ -15,11 +15,13 @@ class RankingsController < ApplicationController
     when "score_ave" then
       @cards = @cards.order(score_ave: "DESC", number: "ASC") 
     when "pick_ave" then
-      @cards = @cards.order(pick_ave: "DESC", number: "ASC") 
+      @cards = @cards.order(pick_ave: "ASC", number: "ASC") 
     when "number" then
       @cards = @cards.order(number: "ASC") 
     when "name" then
-      @cards = @cards.order(name_ja: "ASC") 
+      @cards = @cards.order(name_ja: "ASC", name_en: "ASC") 
+    when "num_of_pick" then
+      @cards = @cards.order(num_of_pick: "DESC") 
     else
       @cards = @cards.order(win_rate: "DESC", number: "ASC") 
     end
