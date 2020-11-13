@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include SessionsHelper
   rescue_from ActiveRecord::RecordNotFound, with: :render_404
 
   def model

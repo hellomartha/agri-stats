@@ -1,7 +1,7 @@
 <%number_collection=[["1",1], ["2",2], ["3",3], ["4",4], ["5",5], ["6",6]]%>
 <%= simple_form_for @resource, wrapper: "horizontal_form" do |f| %>
   <div class="input_forms">
-    <%= f.input :player, as: :select, collection: number_collection, wrapper_html: {class: "one-col-form"} %>
+    <%= f.input :player, as: :select, collection: number_collection.select{|x| x.last > 1}, wrapper_html: {class: "one-col-form"} %>
     <%= f.input :turn_number, as: :select, collection: number_collection, wrapper_html: {class: "one-col-form"}  %>
 
     <% count = 1%>

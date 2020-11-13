@@ -5,7 +5,7 @@ class RankingsController < ApplicationController
 
   def index
     category = params[:category] || "all"
-    @cards = Card.picked.page(params[:page]).per(20).try(category.to_sym)
+    @cards = Card.try(category.to_sym).picked.page(params[:page]).per(20)
 
     case params[:sorted_by] 
     when "win_rate" then

@@ -5,7 +5,7 @@
       <th scope="col">ランク</th>
       <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'number')%>">番号</a><%= sort_mark if params[:sorted_by] == "number"%></th>
       <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'name')%>">名前</a><%= sort_mark if params[:sorted_by] == "name"%></th>
-      <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'num_of_pick')%>">出現回数</a><%= sort_mark if (params[:sorted_by].nil? || params[:sorted_by] == "win_rate")%></th>
+      <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'num_of_pick')%>">出現回数</a><%= sort_mark if (params[:sorted_by].nil? || params[:sorted_by] == "num_of_pick")%></th>
       <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'win_rate')%>">勝率</a><%= sort_mark if (params[:sorted_by].nil? || params[:sorted_by] == "win_rate")%></th>
       <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'use_rate')%>">使用率</a><%= sort_mark if params[:sorted_by] == "use_rate"%></th>
       <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'score_ave')%>">平均点</a><%= sort_mark if params[:sorted_by] == "score_ave"%></th>
