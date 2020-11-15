@@ -6,17 +6,17 @@ class SessionsController < ApplicationController
     end
 
     user_data = request.env['omniauth.auth']
-    user = User.find_by(provider: user_data[:provider], uid: user_date[:uid])
+    user = User.find_by(provider: user_data[:provider], uid: user_data[:uid])
     if user
-      user.update(name: user_date[:info][:name], image_url: user_date[:info][:image])
+      user.update(name: user_data[:info][:name], image_url: user_data[:info][:image])
       log_in user
       flash[:success] = "ログインしました"
     else
       new_user = User.new(
-        provider: user_date[:provider],
-        uid: user_date[:uid],
-        name: user_date[:info][:name],
-        image_url: user_date[:info][:image]
+        provider: user_data[:provider],
+        uid: user_data[:uid],
+        user_name: user_data[:info][:name],
+        image_url: user_data[:info][:image]
       )
 
       if new_user.save
