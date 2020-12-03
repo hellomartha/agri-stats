@@ -33,6 +33,7 @@ gem 'kaminari'
 gem 'rails-i18n'
 gem 'dotenv-rails'
 gem 'omniauth-twitter'
+gem 'active_link_to'
 
 group :production do
   gem 'pg'

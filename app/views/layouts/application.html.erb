@@ -11,20 +11,33 @@
   </head>
 
   <body>
-    <% flash.each do |message_type, message| %>
-      <%= message %>
-    <% end %>
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
-          <h3 class="masthead-brand text-center">アグリスタッツ</h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="<%= new_result_path %>">登録</a>
-            <a class="nav-link" href="<%=ranking_path(category: "occupations")%>">職業ランキング</a>
-            <a class="nav-link" href="<%=ranking_path(category: "improvements")%>">進歩ランキング</a>
-          </nav>
+          <div class="title-header">
+            <h3 class="masthead-brand text-center title mt-3 ml-3">アグリスタッツ</h3>
+            <div class="twitter mt-3 ml-auto mr-3">
+              <%if logged_in? %>
+                <a href="/logout"><img src=<%=current_user.image_url%> width=30 height=30></img>ログアウト</a>
+              <%else %>
+                <a href="/auth/twitter"><img src="/assets/twitter_icon.png" width=30 height=30>ログイン</a>
+              <%end %>
+            </div>
+          </div>
+          <div class="nav-header">
+            <nav class="nav nav-masthead nav-menu ml-3">
+              <%= active_link_to "登録", new_result_path, class: "nav-link" %>
+              <%= active_link_to "職業ランキング", ranking_path(category: "occupations"), class: "nav-link" %>
+              <%= active_link_to "進歩ランキング", ranking_path(category: "improvements"), class: "nav-link" %>
+              <%= active_link_to "マイページ", mypage_path, class: "nav-link" if logged_in? %>
+            </nav>
+          </div>
         </div>
       </header>
+
+      <% flash.each do |message_type, message| %>
+        <%= message %>
+      <% end %>
 
       <main role="main" class="inner cover">
         <%= yield %>

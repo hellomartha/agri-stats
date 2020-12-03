@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
+
+  get '/mypage', to: 'users#show', as: "mypage"
 end

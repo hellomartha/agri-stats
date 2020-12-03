@@ -4,6 +4,7 @@ ja:
       result: ドラフト
       card: カード
       pick: ピック
+      user: ユーザー
       
     attributes:
       result:
@@ -41,3 +42,6 @@ ja:
       pick:
         pick_number: ピック順
         card: カード
+
+      user:
+        user_name: 名前

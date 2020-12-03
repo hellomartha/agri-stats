@@ -87,3 +87,19 @@ legend.col-form-label{
 .align-right{
   margin-left: 70%;
 }
+
+.title-header{
+  display: flex;
+}
+.title-header, .nav-header{
+  background-color: #FFDB4F;
+}
+.nav-link{
+  font-family: "メイリオ";
+  color: black;
+
+  &.active{
+    background-color: #4F72FF;
+    color: white;
+  }
+}
