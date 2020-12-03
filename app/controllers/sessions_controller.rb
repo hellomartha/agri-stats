@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     user_data = request.env['omniauth.auth']
     user = User.find_by(provider: user_data[:provider], uid: user_data[:uid])
     if user
-      user.update(name: user_data[:info][:name], image_url: user_data[:info][:image])
+      user.update(user_name: user_data[:info][:name], image_url: user_data[:info][:image])
       log_in user
       flash[:success] = "ログインしました"
     else
