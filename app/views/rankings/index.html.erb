@@ -2,6 +2,7 @@
   <thead>
     <tr>
       <% sort_mark=" ▼ "%>
+      <th scope="col"></th>
       <th scope="col">ランク</th>
       <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'number')%>">番号</a><%= sort_mark if params[:sorted_by] == "number"%></th>
       <th scope="col"><a href="<%=ranking_path(category: params[:category], sorted_by: 'name')%>">名前</a><%= sort_mark if params[:sorted_by] == "name"%></th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @cards.each.with_index(@cards.offset_value + 1) do|card, i|%>
       <tr>
+        <th scope="row"><%=link_to fa_icon("info-circle"), card_path(card) %></th>
         <th scope="row"><%= i %></th>
         <td><%=card.number%></td>
         <td><%=card.name_ja || card.name_en%></td>
