@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @resource = current_user
+    @user = current_user
+    @results = Result.where(user: current_user).order(id: "DESC")
   end
 
   def columns_of_show

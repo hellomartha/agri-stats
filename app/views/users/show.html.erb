@@ -1,1 +1,32 @@
-<%= show_columns(@resource) %>
+<h5> ◆戦績 </h5>
+<div>プレイ数：<%=current_user.game_count%></div>
+<div>勝率：<%=current_user.win_rate%></div>
+<div>平均点：<%=current_user.score_ave%></div>
+
+<h5> ◆ピック履歴 </h5>
+
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <% sort_mark=" ▼ "%>
+        <th scope="col"></th>
+        <th scope="col">#</th>
+        <th scope="col">プレイ人数</th>
+        <th scope="col">順位</th>
+        <th scope="col">得点</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @results.each.with_index(1) do|result, i|%>
+      <tr>
+        <th scope="row"><%=link_to fa_icon("info-circle"), result_path(result) %></th>
+        <th scope="row"><%= i %></th>
+        <td><%=result.player%></td>
+        <td><%=result.rank%></td>
+        <td><%=result.score%></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
