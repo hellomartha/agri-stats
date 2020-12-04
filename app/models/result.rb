@@ -13,5 +13,11 @@ class Result < ApplicationRecord
       p.card.update_stats
     end
   end
+
+  def first_pick_names
+    picks.where(pick_number: 1).map do |p|
+      p.card.name
+    end.join(", ")
+  end
 end
 

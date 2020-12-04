@@ -3,6 +3,10 @@ class Card < ApplicationRecord
   scope :occupations, -> {where(category:"職業")}
   scope :improvements, -> {where(category:"小進歩")}
 
+  def name
+    name_ja || name_en
+  end
+
   def update_stats
     card_id = self.id
     picks = Pick.includes(:card, :result).joins(:card, :result).where(card_id: card_id)

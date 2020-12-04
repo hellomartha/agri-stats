@@ -36,9 +36,11 @@
         </div>
       </header>
 
-      <% flash.each do |message_type, message| %>
-        <%= message %>
-      <% end %>
+      <div class="flash_message">
+        <% flash.each do |message_type, message| %>
+          <%= message %>
+        <% end %>
+      </div>
 
       <main role="main" class="inner cover m-3">
         <%= yield %>

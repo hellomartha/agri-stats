@@ -1,10 +1,13 @@
-<div class=show-form>
-  <iv> <a class="btn btn-primary align-center" href=<%=edit_result_path(id: @resource.id)%>>修正</a> </div>
-  <%= show_columns(@resource) %>
+<div class="show-form mt-3 mb-3">
+  <iv> <a class="btn btn-primary align-center" href=<%=edit_result_path(id: @resource.id)%>>修正</a>
+ </div>
 
-  <div class="bold"> 
-    使用カード
-  </div>
+<h5> ◆ 基本情報 </h5>
+<div class="rating mb-3">
+  <%= show_columns(@resource) %>
+</div>
+
+<h5> ◆ 使用カード </h5>
   <div class="hands">
     <div class="hands-occupations">
       <span class="used-switch"></span>

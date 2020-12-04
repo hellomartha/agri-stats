@@ -103,6 +103,11 @@ legend.col-form-label{
     color: white;
   }
 }
+
+.flash_message{
+  background-color: silver;
+}
+
 .message{
     padding: 0.5em 1em;
     color: #5d627b;
@@ -114,4 +119,10 @@ legend.col-form-label{
       margin: 0; 
       padding: 0;
     }
+}
+
+.rating{
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  
 }

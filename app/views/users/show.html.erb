@@ -1,10 +1,13 @@
-<h5> ◆戦績 </h5>
-<div>プレイ数：<%=current_user.game_count%></div>
-<div>勝率：<%=current_user.win_rate%></div>
-<div>平均点：<%=current_user.score_ave%></div>
+<h5> ◆ 戦績 </h5>
+<div class="rating mb-3">
+  <div>プレイ数：<%=current_user.game_count%></div>
+  <div>勝率：<%=current_user.win_rate%></div>
+  <div>平均点：<%=current_user.score_ave%></div>
+</div>
 
-<h5> ◆ピック履歴 </h5>
+<h5> ◆ 履歴 </h5>
 
+<p>
 <div>
   <table class="table table-striped">
     <thead>
@@ -15,6 +18,7 @@
         <th scope="col">プレイ人数</th>
         <th scope="col">順位</th>
         <th scope="col">得点</th>
+        <th scope="col">初手</th>
       </tr>
     </thead>
     <tbody>
@@ -25,8 +29,10 @@
         <td><%=result.player%></td>
         <td><%=result.rank%></td>
         <td><%=result.score%></td>
+        <td><%=result.first_pick_names%></td>
       </tr>
       <% end %>
     </tbody>
   </table>
 </div>
+</p>
