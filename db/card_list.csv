@@ -539,173 +539,173 @@ C177,山歩き,,職業
 C178,建築牧師,,職業
 C179,牛飼いの草分け,,職業
 C180,罠猟師,,職業
-D001,,,小進歩
-D002,,,小進歩
-D003,,,小進歩
-D004,,Cross-Cut Wood,小進歩
-D005,,,小進歩
-D006,,,小進歩
+D001,ジグザグ鋤,Zigzag Harrow,小進歩
+D002,住居計画,Dwelling Plan,小進歩
+D003,畝の溝,Furrows,小進歩
+D004,輪切りの木,Cross-Cut Wood,小進歩
+D005,畑粘土,Field Clay,小進歩
+D006,珪化木,Petrified Wood,小進歩
 D007,,Trident,小進歩
-D008,,,小進歩
+D008,シダの種,Fern Seeds,小進歩
 D009,獲物の交換,Game Trade,小進歩
 D010,,Stork's Nest,小進歩
-D011,,,小進歩
+D011,芝生肥料,Lawn Fertilizer,小進歩
 D012,,Milking Place,小進歩
-D013,,,小進歩
-D014,,,小進歩
+D013,鏝(こて),Trowel,小進歩
+D014,ハンマークラッシャー,Hammer Crusher,小進歩
 D015,レンガの柱,Clay Supports,小進歩
-D016,,,小進歩
-D017,,,小進歩
-D018,,,小進歩
-D019,,,小進歩
+D016,木製ホエーバケツ,Wooden Whey Bucket,小進歩
+D017,ドリル鋤,Drill Harrow,小進歩
+D018,蒸気鋤,Steam Plow,小進歩
+D019,粉砕鋤,Pulverizer Plow,小進歩
 D020,折り返し鋤,Turnwrest Plow,小進歩
-D021,,,小進歩
-D022,,,小進歩
-D023,,,小進歩
-D024,,,小進歩
-D025,,,小進歩
-D026,,,小進歩
-D027,,,小進歩
+D021,リクルート,Recruitment,小進歩
+D022,就労許可,Work Permit,小進歩
+D023,開拓精神,Pioneering Spirit,小進歩
+D024,兄弟愛,Brotherly Love,小進歩
+D025,魔女のダンスフロア,Witches' Dance Floor,小進歩
+D026,大工の庭,Carpenter's Yard,小進歩
+D027,再教育,Retraining,小進歩
 D028,書き机,Writing Desk,小進歩
 D029,,Muck Rake,小進歩
-D030,,,小進歩
-D031,,,小進歩
-D032,,,小進歩
-D033,,,小進歩
-D034,,,小進歩
-D035,,,小進歩
-D036,,,小進歩
+D030,職人区,Artisan District,小進歩
+D031,貯蔵庫,Storeroom,小進歩
+D032,木のくまで,Wood Rake,小進歩
+D033,あずま屋,Summer House,小進歩
+D034,贅沢なホステル,Luxurious Hostel,小進歩
+D035,飼料室,Fodder Chamber,小進歩
+D036,品種登録,Breed Registry,小進歩
 D037,彫刻,Sculpture,小進歩
 D038,搾乳台,Milking Stool,小進歩
 D039,,Truffle Slicer,小進歩
-D040,,,小進歩
+D040,汚水溜まり,Cesspit,小進歩
 D041,,Horse-Drawn Boat,小進歩
 D042,教育手当,Education Bonus,小進歩
 D043,,Hutch,小進歩
-D044,,,小進歩
+D044,森の井戸,Forest Well,小進歩
 D045,羊の井戸,Sheep Well,小進歩
-D046,,,小進歩
-D047,,,小進歩
-D048,,,小進歩
+D046,ペレットプレス,Pellet Press,小進歩
+D047,教会堂,Churchyard,小進歩
+D048,市民的一面,Civic Facade,小進歩
 D049,本棚,Bookshelf,小進歩
 D050,,Foreign Aid,小進歩
-D051,,,小進歩
-D052,,,小進歩
-D053,,,小進歩
-D054,,,小進歩
-D055,,,小進歩
-D056,,,小進歩
-D057,,,小進歩
-D058,,,小進歩
-D059,,,小進歩
-D060,,,小進歩
-D061,,,小進歩
-D062,,,小進歩
-D063,,,小進歩
-D064,,,小進歩
-D065,,,小進歩
+D051,アーチ道,Archway,小進歩
+D052,転がるピン,Rolling Pin,小進歩
+D053,茶屋,Tea House,小進歩
+D054,鱒の池,Trout Pool,小進歩
+D055,新たな市場,New Market,小進歩
+D056,家畜ストレッチャー,Fatstock Stretcher,小進歩
+D057,卸売市場,Wholesale Market,小進歩
+D058,散布車,Gritter,小進歩
+D059,地球オーブン,Earth Oven,小進歩
+D060,大きな製陶所,Large Pottery,小進歩
+D061,わら俵,Bale of Straw,小進歩
+D062,ビール栓,Beer Tap,小進歩
+D063,リンチェット,Lynchet,小進歩
+D064,パン作りの過程,Baking Course,小進歩
+D065,穀物のふるい,Grain Sieve,小進歩
 D066,,Potter Ceramics,小進歩
-D067,,,小進歩
-D068,,,小進歩
+D067,刈り取りフック,Reap Hook,小進歩
+D068,小さな籠,Small Basket,小進歩
 D069,,Small Greenhouse,小進歩
-D070,,,小進歩
-D071,,,小進歩
-D072,,,小進歩
+D070,藁の肥やし,Straw Manure,小進歩
+D071,転作,Changeover,小進歩
+D072,厩の肥やし,Stable Manure,小進歩
 D073,補給ボート,Supply Boat,小進歩
-D074,,,小進歩
+D074,王家の木,Royal Wood,小進歩
 D075,樹木畑,Wood Field,小進歩
-D076,,,小進歩
+D076,社会的利益,Social Benefits        ,小進歩
 D077,再生レンガ,Recycled Brick,小進歩
 D078,葦の池,Reed Pond,小進歩
 D079,ニンジンミュージアム,Carrot Museum,小進歩
-D080,,,小進歩
-D081,,,小進歩
+D080,レンガのハンマー,Brick Hammer,小進歩
+D081,屋根梯子,Roof Ladder,小進歩
 D082,狩りの戦利品,Hunting Trophy,小進歩
-D083,,,小進歩
+D083,豚の飯,Pigswill,小進歩
 D084,ペレット状飼料,Feed Pellets,小進歩
-D085,,,職業
-D086,,,職業
+D085,読者,Reader,職業
+D086,羊エージェント,Sheep Agent,職業
 D087,建築士,Master Builder,職業
 D088,石臼職人,Millwright,職業
 D089,厩番,Stablehand,職業
 D090,鋤鍛冶,Plow Maker,職業
 D091,鋤手,Plowman,職業
-D092,,,職業
-D093,,,職業
-D094,,,職業
-D095,,,職業
+D092,こどもオンブズマン,Child Ombudsman,職業
+D093,羊の検査官,Sheep Inspector,職業
+D094,恐妻家,Henpecked Husband,職業
+D095,敷地管理者,Site Manager,職業
 D096,家具調達人,Furnisher,職業
 D097,無心する学生,Begging Student,職業
 D098,交渉使節,Transactor,職業
-D099,,,職業
-D100,,,職業
+D099,土器陶工,Earthenware Potter,職業
+D100,君主,Lord of the Manor,職業
 D101,菓子職人,Sugar Baker,職業
-D102,,,職業
-D103,,,職業
+D102,厩見本造り,Sample Stable Maker,職業
+D103,運河の船頭,Canal Boatman,職業
 D104,耕作者,Cultivator,職業
-D105,,,職業
-D106,,,職業
+D105,彫刻家,Sculptor,職業
+D106,ウィスキー製造業者,Whisky Distiller,職業
 D107,釣鐘鋳造師,Bellfounder,職業
 D108,石工,Stone Carver,職業
-D109,,,職業
-D110,,,職業
+D109,種まきマスター,Sowing Master,職業
+D110,魚の養殖業者,Fish Farmer,職業
 D111,内装業者,Interior Decorator,職業
-D112,,,職業
-D113,,,職業
+D112,若手農夫,Young Farmer,職業
+D113,食品商,Food Merchant,職業
 D114,種商人,Seed Trader,職業
 D115,飼い葉の栽培人,Fodder Planter,職業
-D116,,,職業
+D116,樹木検査官,Tree Inspector,職業
 D117,木の専門家,Wood Expert,職業
 D118,唐変木,Bonehead,職業
 D119,森の労役者,Wood Barterer,職業
 D120,粘土運び,Clay Deliveryman,職業
 D121,レンガ積み,Clay Plasterer,職業
-D122,粘土売り,Clay Seller,職業
-D123,,,職業
-D124,,,職業
-D125,,,職業
-D126,,,職業
-D127,,,職業
-D128,建設の獅子,Build Tycoon,職業
-D129,,,職業
-D130,,,職業
-D131,,,職業
+D122,粘土運搬人,Clay Carrier,職業
+D123,リフォーム準備担当,Renovation Preparer,職業
+D124,使者,Emissary,職業
+D125,森林商,Forest Trader,職業
+D126,畑の耕作者,Field Cultivator,職業
+D127,働き者,Hardworking Man,職業
+D128,建設業界の大物,Building Tycoon,職業
+D129,材木名人,Lumber Virtuoso,職業
+D130,日曜大工,Recreational Carpenter,職業
+D131,職人技術のプロモーター,Craftsmanship Promoter,職業
 D132,小作人,Hide Farmer,職業
-D133,,,職業
-D134,,,職業
-D135,,,職業
-D136,,,職業
-D137,,,職業
+D133,ビールテントの管理者,Beer Tent Operator,職業
+D134,牡蠣喰い,Oyster Eater,職業
+D135,造園事務長,Gardening Head Official,職業
+D136,動物活動家,Animal Activist,職業
+D137,貿易教師,Trade Teacher,職業
 D138,動物好き,Pet Lover,職業
-D139,,,職業
-D140,,,職業
+D139,会長,Chairman,職業
+D140,烏合の衆,Loudmouth,職業
 D141,種屋,Seed Seller,職業
-D142,,,職業
-D143,,,職業
-D144,水辺の労働者,Water Worker,職業
-D145,,,職業
+D142,じゃがいも農家,Potato Planter,職業
+D143,木刈り,Tree Cutter,職業
+D144,水辺の労働者,Water Warker,職業
+D145,屋根の検査員,Roof Examiner,職業
 D146,荷物運搬人,Porter,職業
-D147,,,職業
-D148,屋内飼の専門家,Domestician Expert,職業
-D149,,,職業
-D150,,,職業
-D151,,,職業
+D147,罠仕掛け,Trap Builder,職業
+D148,屋内飼いの専門家,Domestician Expert,職業
+D149,カジュアルワーカー,Casual Worker,職業
+D150,神の配偶者,Godly Spouse,職業
+D151,メディア担当,Spin Doctor,職業
 D152,パトロン,Patron,職業
-D153,,,職業
+D153,富裕層,Wealthy Man,職業
 D154,煙突掃除人,Chimney Sweep,職業
-D155,,,職業
-D156,,,職業
-D157,,,職業
+D155,黒檀細工職人,Ebonist,職業
+D156,小売商人,Retail Dealer,職業
+D157,パーティーの主催者,Party Organizer,職業
 D158,マメな会計士,Bean Counter,職業
-D159,,,職業
-D160,,,職業
-D161,,,職業
+D159,葦売り,Reed Seller,職業
+D160,助産師,Midwife,職業
+D161,キャベツ買付け人,Cabbage Buyer,職業
 D162,レンガ焼き,Clay Firer,職業
-D163,,,職業
-D164,,,職業
-D165,,,職業
-D166,,,職業
-D167,,,職業
+D163,一人前のレンガ職人,Journeyman Bricklayer,職業
+D164,ペットの養育者,Pet Grower,職業
+D165,猪の追跡者,Pig Stalker,職業
+D166,厩の乳絞り,Stable Milker,職業
+D167,生粋のブリーダー,Pure Breeder,職業
 D168,家畜の世話人,Stockman,職業
 D169,鋤打ち,,職業
 D170,囲い柵作り,,職業
@@ -731,7 +731,7 @@ L075,,Storekeepers,職業
 L076,族長の娘,Chief's Daughter,職業
 L077,,"Yeager, Not Hunter",職業
 L078,,Elder Fisher,職業
-L079,族長の娘,Chief,職業
+L079,族長,Chief,職業
 L080,,Cover Advertiser,職業
 L081,,City Planner,職業
 L082,,Were-Clone,小進歩
