@@ -383,7 +383,7 @@ C021,ハート型の石,Heart of Stone,小進歩
 C022,バスケットチェア,BasketChair,小進歩
 C023,雇用契約,Job Contract,小進歩
 C024,小麦畑のベッド,Bed in the GrainField,小進歩
-C025,,Ssteam Machine,小進歩
+C025,,Steam Machine,小進歩
 C026,脱穀棒,Flail,小進歩
 C027,建築設計図,Blueprint,小進歩
 C028,教師机,Teacher'sDesk,小進歩
@@ -584,7 +584,7 @@ D042,教育手当,Education Bonus,小進歩
 D043,,Hutch,小進歩
 D044,森の井戸,Forest Well,小進歩
 D045,羊の井戸,Sheep Well,小進歩
-D046,ペレットプレス,Pellet Press,小進歩
+D046,ペレット圧搾機,Pellet Press,小進歩
 D047,教会堂,Churchyard,小進歩
 D048,市民的一面,Civic Facade,小進歩
 D049,本棚,Bookshelf,小進歩
@@ -627,7 +627,7 @@ D085,読者,Reader,職業
 D086,羊エージェント,Sheep Agent,職業
 D087,建築士,Master Builder,職業
 D088,石臼職人,Millwright,職業
-D089,厩番,Stablehand,職業
+D089,馬丁,Stablehand,職業
 D090,鋤鍛冶,Plow Maker,職業
 D091,鋤手,Plowman,職業
 D092,こどもオンブズマン,Child Ombudsman,職業
@@ -640,7 +640,7 @@ D098,交渉使節,Transactor,職業
 D099,土器陶工,Earthenware Potter,職業
 D100,君主,Lord of the Manor,職業
 D101,菓子職人,Sugar Baker,職業
-D102,厩見本造り,Sample Stable Maker,職業
+D102,お試し厩造り,Sample Stable Maker,職業
 D103,運河の船頭,Canal Boatman,職業
 D104,耕作者,Cultivator,職業
 D105,彫刻家,Sculptor,職業
@@ -648,7 +648,7 @@ D106,ウィスキー製造業者,Whisky Distiller,職業
 D107,釣鐘鋳造師,Bellfounder,職業
 D108,石工,Stone Carver,職業
 D109,種まきマスター,Sowing Master,職業
-D110,魚の養殖業者,Fish Farmer,職業
+D110,養魚家,Fish Farmer,職業
 D111,内装業者,Interior Decorator,職業
 D112,若手農夫,Young Farmer,職業
 D113,食品商,Food Merchant,職業
@@ -664,12 +664,12 @@ D122,粘土運搬人,Clay Carrier,職業
 D123,リフォーム準備担当,Renovation Preparer,職業
 D124,使者,Emissary,職業
 D125,森林商,Forest Trader,職業
-D126,畑の耕作者,Field Cultivator,職業
+D126,畑の開拓者,Field Cultivator,職業
 D127,働き者,Hardworking Man,職業
 D128,建設業界の大物,Building Tycoon,職業
 D129,材木名人,Lumber Virtuoso,職業
 D130,日曜大工,Recreational Carpenter,職業
-D131,職人技術のプロモーター,Craftsmanship Promoter,職業
+D131,職人仕事の後援者,Craftsmanship Promoter,職業
 D132,小作人,Hide Farmer,職業
 D133,ビールテントの管理者,Beer Tent Operator,職業
 D134,牡蠣喰い,Oyster Eater,職業
