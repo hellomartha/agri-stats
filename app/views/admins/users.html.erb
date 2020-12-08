@@ -1,0 +1,19 @@
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <% sort_mark=" ▼ "%>
+        <th scope="col">#</th>
+        <th scope="col">プレイヤー</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each.with_index(1) do|user, i|%>
+      <tr>
+        <th scope="row"><%= i %></th>
+        <td><%=user.user_name%></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

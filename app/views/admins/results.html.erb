@@ -1,0 +1,28 @@
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <% sort_mark=" ▼ "%>
+        <th scope="col"></th>
+        <th scope="col">#</th>
+        <th scope="col">プレイヤー</th>
+        <th scope="col">順位/プレイ人数</th>
+        <th scope="col">得点</th>
+        <th scope="col">初手</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @results.each.with_index(1) do|result, i|%>
+      <tr>
+        <th scope="row"><%=link_to fa_icon("info-circle"), result_path(result) %></th>
+        <th scope="row"><%= i %></th>
+        <td><%=result.user&.user_name%></td>
+        <td><%=result.rank%> / <%=result.player%> </td>
+        <td><%=result.score%></td>
+        <td><%=result.first_pick_names%></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+

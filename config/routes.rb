@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   get '/mypage', to: 'users#show', as: "mypage"
+
+  get '/admin/users', to: "admins#users"
+  get '/admin/results', to: "admins#results"
 end
