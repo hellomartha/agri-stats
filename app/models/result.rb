@@ -7,6 +7,7 @@ class Result < ApplicationRecord
   after_destroy :update_card_stats
 
   validates :player, :rank, :score, :turn_number, presence: true
+  scope :by_user, -> (user) { where(user: user) }
 
   def update_card_stats
     picks.each do|p|

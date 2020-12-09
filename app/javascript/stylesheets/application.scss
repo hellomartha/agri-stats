@@ -136,3 +136,16 @@ legend.col-form-label{
   width: 100px;
   margin-left: auto;
 }
+
+.hover-switch:hover + .hover-pop{
+  display: inline;
+}
+.hover-pop{
+  display: none;
+  border: solid 1px;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 5px;
+  width: 50%;
+  background-color: lightblue;
+}

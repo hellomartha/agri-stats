@@ -1,8 +1,18 @@
 <h5> ◆ 戦績 </h5>
 <div class="rating mb-3">
   <div>プレイ数：<%=current_user.game_count%></div>
-  <div>勝率：<%=current_user.win_rate%></div>
-  <div>平均点：<%=current_user.score_ave%></div>
+  <div>勝率：<%=number_to_percentage(current_user.win_rate*100, precision: 2)%></div>
+  <div>平均点：<%=number_with_precision(current_user.score_ave, precision: 2)%></div>
+  <div class="hover-detail">平均順位
+    <span class="hover-switch"><%=fa_icon("question-circle")%></span>
+    <span class="hover-pop">1位1.0, 最下位0.0 (4人プレイ時：2位0.666, 3位0.333)として平均を計算</span>
+    ：<%=number_with_precision(current_user.rankscore_ave, precision: 3)%>
+  </div>
+  <div class="hover-detail">平均番手
+    <span class="hover-switch"><%=fa_icon("question-circle")%></span>
+    <span class="hover-pop">1位1.0, 最下位0.0 (4人プレイ時：2位0.666, 3位0.333)として平均を計算</span>
+    ：<%=number_with_precision(current_user.turnscore_ave, precision: 3)%>
+  </div>
 </div>
 
 <h5> ◆ 履歴 </h5>

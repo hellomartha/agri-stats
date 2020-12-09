@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @results = Result.where(user: current_user).order(id: "DESC")
+    @results = Result.by_user(current_user).order(id: "DESC")
   end
 
   def columns_of_show
