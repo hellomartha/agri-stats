@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'top#show'
 
-  resources :results, except: [:index]
+  resources :results, except: [:index] do
+    get 'exclude_calc', on: :member
+    get 'include_calc', on: :member
+  end
   resources :cards, only: [:show]
 
   get 'rankings(/:category)', to: 'rankings#index', as: 'ranking'

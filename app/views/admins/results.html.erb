@@ -9,6 +9,7 @@
         <th scope="col">順位/プレイ人数</th>
         <th scope="col">得点</th>
         <th scope="col">初手</th>
+        <th scope="col">集計</th>
       </tr>
     </thead>
     <tbody>
@@ -20,6 +21,11 @@
         <td><%=result.rank%> / <%=result.player%> </td>
         <td><%=result.score%></td>
         <td><%=result.first_pick_names%></td>
+        <% if result.calc_target %>
+          <td><%=link_to fa_icon("plus-circle"), exclude_calc_result_path(result) %></td>
+        <% else %>
+          <td><%=link_to fa_icon("exclamation-triangle"), include_calc_result_path(result) %></td>
+        <% end %>
       </tr>
       <% end %>
     </tbody>

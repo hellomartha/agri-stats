@@ -9,7 +9,7 @@ class Card < ApplicationRecord
 
   def update_stats
     card_id = self.id
-    picks = Pick.includes(:card, :result).joins(:card, :result).where(card_id: card_id)
+    picks = Pick.includes(:card, :result).joins(:card, :result).where(card_id: card_id, "results.calc_target": true)
     num_of_pick = picks.count
     used_picks = picks.where(used: true)
     num_of_use = used_picks.count

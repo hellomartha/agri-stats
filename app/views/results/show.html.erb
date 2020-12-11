@@ -1,5 +1,12 @@
 <div class="show-form mt-3 mb-3">
   <a class="btn btn-primary align-center" href=<%=edit_result_path(id: @resource.id)%>>修正</a>
+  <% if admin? %>
+    <% if @resource.calc_target? %>
+      <a class="btn btn-warning align-center" href=<%=exclude_calc_result_path(id: @resource.id)%>>集計除外</a>
+    <% else %>
+      <a class="btn btn-warning align-center" href=<%=include_calc_result_path(id: @resource.id)%>>集計</a>
+    <% end %>
+  <% end %>
 </div>
 
 <h5> ◆ 基本情報 </h5>

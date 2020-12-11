@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_11_064406) do
+ActiveRecord::Schema.define(version: 2020_12_11_225630) do
 
   create_table "cards", force: :cascade do |t|
     t.string "name_en"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2020_11_11_064406) do
     t.integer "rank"
     t.integer "score"
     t.integer "user_id"
+    t.boolean "calc_target", default: true, null: false
     t.index ["user_id"], name: "index_results_on_user_id"
   end
 

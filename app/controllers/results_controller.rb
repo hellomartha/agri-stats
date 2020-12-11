@@ -7,6 +7,10 @@ class ResultsController < ApplicationController
       :player, :turn_number, :rank, :score
     ]
   end
+  def resource
+    Result.find(params[:id])
+  end
+
   def index
     @resources = Result.all
   end
@@ -16,8 +20,26 @@ class ResultsController < ApplicationController
   end
 
   def edit
-    @resource = Result.find(params[:id])
+    @resource = resource
     @resource = build_14picks(@resource)
+  end
+
+  def exclude_calc
+    if admin?
+      resource.update(calc_target: false)
+      redirect_back(fallback_location: root_path)
+    else
+      render_404
+    end
+  end
+
+  def include_calc
+    if admin?
+      resource.update(calc_target: true)
+      redirect_back(fallback_location: root_path)
+    else
+      render_404
+    end 
   end
 
   def build_14picks(result)
@@ -57,7 +79,7 @@ class ResultsController < ApplicationController
 
   def update
     x = permit_params
-    @resource = Result.find(params[:id])
+    @resource = resource
     @resource.picks=[]
     @resource.assign_attributes(x)
     @resource = link_picks(@resource)
@@ -71,7 +93,7 @@ class ResultsController < ApplicationController
   end
 
   def show
-    @resource = Result.find(params[:id])
+    @resource = resource
     @resource = build_14picks(@resource)
   end
 
