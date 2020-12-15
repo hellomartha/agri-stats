@@ -18,6 +18,7 @@ class User < ApplicationRecord
   end
   def rankscore_ave
     results = Result.by_user(self).where.not(player: 1) 
+    return 0 unless results.present?
     total = results.map{|r|
       1 - ((r.rank.to_f-1)/(r.player.to_f-1))
     }.sum
@@ -25,6 +26,7 @@ class User < ApplicationRecord
   end
   def turnscore_ave
     results = Result.by_user(self).where.not(player: 1) 
+    return 0 unless results.present?
     total = results.map{|r|
       1-((r.turn_number.to_f-1)/(r.player.to_f-1))
     }.sum
