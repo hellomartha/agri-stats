@@ -1,6 +1,6 @@
 <div class="show-form mt-3 mb-3">
   <%= link_to link_button("修正", class: "btn btn-primary "), edit_result_path(id: @resource.id) %>
-  <% if logged_in? && ( admin? || resource.user == current_user) %>
+  <% if logged_in? && ( admin? || @resource.user == current_user) %>
     <%= link_to link_button("削除", class: "btn btn-warning "), result_path(id: @resource.id), method: :delete, data: {confirm: "削除しますか?"} %>
   <% end %>
   <% if admin? %>
