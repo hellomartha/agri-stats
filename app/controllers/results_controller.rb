@@ -24,6 +24,15 @@ class ResultsController < ApplicationController
     @resource = build_14picks(@resource)
   end
 
+  def destroy
+    if logged_in? && ( admin? || resource.user == current_user)
+      resource.destroy
+      redirect_to root_url
+    else
+      render_404
+    end
+  end
+
   def exclude_calc
     if admin?
       resource.update(calc_target: false)

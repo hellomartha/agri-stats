@@ -23,4 +23,9 @@ module ResultsHelper
     }.to_h
     x.to_json
   end
+
+  def link_button(str, options = nil)
+    options ||= {}
+    content_tag(:span, str, class: options[:class])
+  end
 end

@@ -1,10 +1,13 @@
 <div class="show-form mt-3 mb-3">
-  <a class="btn btn-primary align-center" href=<%=edit_result_path(id: @resource.id)%>>修正</a>
+  <%= link_to link_button("修正", class: "btn btn-primary "), edit_result_path(id: @resource.id) %>
+  <% if logged_in? && ( admin? || resource.user == current_user) %>
+    <%= link_to link_button("削除", class: "btn btn-warning "), result_path(id: @resource.id), method: :delete %>
+  <% end %>
   <% if admin? %>
     <% if @resource.calc_target? %>
-      <a class="btn btn-warning align-center" href=<%=exclude_calc_result_path(id: @resource.id)%>>集計除外</a>
+      <%= link_to link_button("集計除外", class: "btn btn-secondary "), exclude_calc_result_path(id: @resource.id) %>
     <% else %>
-      <a class="btn btn-warning align-center" href=<%=include_calc_result_path(id: @resource.id)%>>集計</a>
+      <%= link_to link_button("集計", class: "btn btn-secondary "), include_calc_result_path(id: @resource.id) %>
     <% end %>
   <% end %>
 </div>
