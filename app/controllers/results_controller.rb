@@ -4,7 +4,7 @@ class ResultsController < ApplicationController
   end
   def columns_of_show
     [
-      :player, :turn_number, :rank, :score
+      :player, :turn_number, :rank, :score, :note
     ]
   end
   def resource
@@ -123,6 +123,7 @@ class ResultsController < ApplicationController
       :turn_number,
       :rank,
       :score,
+      :note,
       picks_attributes: [:id, :result_id, :card_id, :pick_number, :deck, :number, :used]
     )
   end
