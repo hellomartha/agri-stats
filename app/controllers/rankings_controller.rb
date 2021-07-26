@@ -23,7 +23,7 @@ class RankingsController < ApplicationController
     when "num_of_pick" then
       @cards = @cards.order(num_of_pick: "DESC") 
     else
-      @cards = @cards.order(win_rate: "DESC", num_of_pick: "DESC", number: "ASC") 
+      @cards = @cards.order(num_of_pick: "DESC", win_rate: "DESC", number: "ASC") 
     end
     @cards
   end
