@@ -34,4 +34,12 @@ class Card < ApplicationRecord
       pick_ave: pick_ave
     )
   end
+
+  def win_rate_percent
+    (win_rate * 100)
+  end
+
+  def use_rate_percent
+    (use_rate * 100)
+  end
 end
