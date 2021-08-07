@@ -12,6 +12,7 @@ ja:
         turn_number: 番手
         rank: 順位
         score: 得点
+        note: メモ
         unit:
           player: 人
           turn_number: 番手 
