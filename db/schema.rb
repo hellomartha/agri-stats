@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 2021_07_26_070232) do
     t.integer "turn_number"
     t.integer "rank"
     t.integer "score"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.boolean "calc_target", default: true, null: false
     t.string "note"
     t.index ["user_id"], name: "index_results_on_user_id"

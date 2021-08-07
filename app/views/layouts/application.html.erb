@@ -20,7 +20,9 @@
               <%if logged_in? %>
                 <a href="/logout"><img src=<%=current_user.image_url%> width=30 height=30></img>ログアウト</a>
               <%else %>
-                <a href="/auth/twitter"><img src="/assets/twitter_icon.png" width=30 height=30>ログイン</a>
+                <%= link_to '/auth/twitter', method: :post do %>
+                  <img src="/assets/twitter_icon.png" width=30 height=30>ログイン
+                <% end %>
               <%end %>
             </div>
           </div>
