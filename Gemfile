@@ -35,6 +35,7 @@ gem 'dotenv-rails'
 gem 'omniauth-twitter'
 gem 'active_link_to'
 gem 'font-awesome-rails'
+gem 'omniauth-rails_csrf_protection'
 
 group :production do
   gem 'pg'
